@@ -1,48 +1,48 @@
-# WhatsApp Campaign Management System
+# Sistema de Gestión de Campañas de WhatsApp
 
-A comprehensive WhatsApp messaging platform built with Laravel and Node.js, featuring advanced campaign management, real-time message tracking, and automated reply handling.
+Una plataforma integral de mensajería WhatsApp construida con Laravel y Node.js, que incluye gestión avanzada de campañas, seguimiento de mensajes en tiempo real y manejo automatizado de respuestas.
 
-## 🚀 Features
+## 🚀 Funcionalidades
 
-### Campaign Management
-- **Create & Edit Campaigns**: Full CRUD operations for marketing campaigns
-- **Bulk Messaging**: Send messages to multiple recipients simultaneously  
-- **Campaign Restart**: Restart completed campaigns with reset statistics
-- **Message Templates**: Support for both text and template messages
-- **Phone Number Management**: Add/remove recipients dynamically
+### Gestión de Campañas
+- **Crear y Editar Campañas**: Operaciones CRUD completas para campañas de marketing
+- **Mensajería Masiva**: Envío de mensajes a múltiples destinatarios simultáneamente
+- **Reinicio de Campaña**: Reiniciar campañas completadas y reiniciar estadísticas
+- **Plantillas de Mensajes**: Soporte tanto para mensajes de texto como para plantillas
+- **Gestión de Números**: Añadir/eliminar destinatarios dinámicamente
 
-### Real-time Tracking
-- **Message Status**: Track sent, delivered, and read status
-- **Reply Tracking**: Automatic capture and linking of customer replies
-- **Live Statistics**: Real-time campaign analytics and metrics
-- **Webhook Integration**: Seamless integration with WhatsApp Business API
+### Seguimiento en Tiempo Real
+- **Estado del Mensaje**: Seguimiento de enviado, entregado y leído
+- **Seguimiento de Respuestas**: Captura automática y vinculación de respuestas de clientes
+- **Estadísticas en Vivo**: Métricas y analíticas de campaña en tiempo real
+- **Integración por Webhooks**: Integración fluida con la API de WhatsApp Business
 
-### Analytics & Reporting
-- **Campaign Statistics**: Delivery rates, read rates, and reply rates
-- **Reply Management**: View and manage customer responses
-- **Export Functionality**: Export campaign results to CSV
-- **Performance Metrics**: Comprehensive campaign performance tracking
+### Análisis e Informes
+- **Estadísticas de Campaña**: Tasas de entrega, lectura y respuesta
+- **Gestión de Respuestas**: Ver y gestionar las respuestas de los clientes
+- **Exportar Resultados**: Exportar resultados de campañas a CSV
+- **Métricas de Rendimiento**: Seguimiento completo del rendimiento de campañas
 
-## 🛠 Tech Stack
+## 🛠 Stack Tecnológico
 
 - **Backend**: Laravel 10+ (PHP 8.1+)
 - **Frontend**: Livewire, TailwindCSS, Alpine.js
-- **WhatsApp Engine**: Node.js with Baileys library
-- **Database**: MySQL/PostgreSQL
-- **Real-time**: WebSocket integration
-- **Queue System**: Laravel Queues for message processing
+- **Motor WhatsApp**: Node.js con la librería Baileys
+- **Base de Datos**: MySQL/PostgreSQL
+- **Tiempo Real**: Integración por WebSocket
+- **Colas**: Colas de Laravel para procesamiento de mensajes
 
-## 📋 Requirements
+## 📋 Requisitos
 
-- PHP 8.1 or higher
+- PHP 8.1 o superior
 - Composer
-- Node.js 16+ and npm
-- MySQL/PostgreSQL database
-- WhatsApp Business account
+- Node.js 16+ y npm
+- Base de datos MySQL/PostgreSQL
+- Cuenta de WhatsApp Business
 
-## ⚡ Quick Start
+## ⚡ Inicio Rápido
 
-### 1. Clone & Install
+### 1. Clonar e Instalar
 ```bash
 git clone <repository-url>
 cd laravel-whatsapp-saas
@@ -50,222 +50,222 @@ composer install
 npm install
 ```
 
-### 2. Environment Setup
+### 2. Configurar el Entorno
 ```bash
 cp .env.example .env
 php artisan key:generate
 ```
 
-### 3. Database Configuration
+### 3. Configuración de la Base de Datos
 ```env
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=whatsapp_saas
-DB_USERNAME=your_username
-DB_PASSWORD=your_password
+DB_USERNAME=tu_usuario
+DB_PASSWORD=tu_contraseña
 ```
 
-### 4. Run Migrations
+### 4. Ejecutar Migraciones
 ```bash
 php artisan migrate
 ```
 
-### 5. Build Assets
+### 5. Compilar Assets
 ```bash
 npm run build
 ```
 
-### 6. Start Services
+### 6. Iniciar Servicios
 ```bash
-# Terminal 1: Laravel Application
+# Terminal 1: Aplicación Laravel
 php artisan serve
 
-# Terminal 2: WhatsApp Engine
+# Terminal 2: Motor de WhatsApp
 cd whatsapp-engine
 npm install
 npm start
 ```
 
-## 🔧 WhatsApp Engine Setup
+## 🔧 Configuración del Motor de WhatsApp
 
-### 1. Install Dependencies
+### 1. Instalar Dependencias
 ```bash
 cd whatsapp-engine
 npm install
 ```
 
-### 2. Configure Environment
+### 2. Configurar el Entorno
 ```bash
-# Create .env file in whatsapp-engine directory
+# Crear archivo .env en el directorio whatsapp-engine
 WHATSAPP_ENGINE_PORT=3000
 APP_URL=http://localhost:8000
 WEBHOOK_URL=http://localhost:8000/webhook/whatsapp
 NODE_ENV=development
 ```
 
-### 3. Start Engine & Connect WhatsApp
+### 3. Iniciar el Motor y Conectar WhatsApp
 ```bash
 npm start
-# Visit http://localhost:3000/status
-# Scan QR code with your WhatsApp
+# Visita http://localhost:3000/status
+# Escanea el código QR con tu WhatsApp
 ```
 
-## 📱 Usage Guide
+## 📱 Guía de Uso
 
-### Creating Campaigns
-1. Navigate to **Campaigns** section
-2. Click **"New Campaign"**
-3. Fill in campaign details:
-   - Campaign name and description
-   - Message content
-   - Phone numbers (one per line)
-4. Click **"Create Campaign"**
+### Crear Campañas
+1. Navega a la sección **Campaigns**
+2. Haz clic en **"New Campaign"**
+3. Rellena los detalles de la campaña:
+   - Nombre y descripción de la campaña
+   - Contenido del mensaje
+   - Números de teléfono (uno por línea)
+4. Haz clic en **"Create Campaign"**
 
-### Managing Campaigns
-- **Start**: Begin sending messages
-- **Pause**: Temporarily stop campaign
-- **Edit**: Modify content or recipients (even completed campaigns)
-- **Restart**: Reset and resend completed campaigns
-- **View Details**: See detailed statistics and replies
+### Gestionar Campañas
+- **Start**: Iniciar el envío de mensajes
+- **Pause**: Pausar temporalmente la campaña
+- **Edit**: Modificar contenido o destinatarios (incluso campañas completadas)
+- **Restart**: Reiniciar y volver a enviar campañas completadas
+- **View Details**: Ver estadísticas detalladas y respuestas
 
-### Monitoring Replies
-- **Real-time Tracking**: Replies appear automatically
-- **Reply Management**: View all replies in dedicated section
-- **Export Data**: Download campaign results with replies
+### Monitoreo de Respuestas
+- **Seguimiento en Tiempo Real**: Las respuestas aparecen automáticamente
+- **Gestión de Respuestas**: Ver todas las respuestas en una sección dedicada
+- **Exportar Datos**: Descargar resultados de la campaña con respuestas
 
-## 🔌 API Endpoints
+## 🔌 Endpoints de la API
 
-### Campaign Management
+### Gestión de Campañas
 ```bash
-# Get campaign status
+# Obtener estado de una campaña
 GET /api/campaigns/{id}
 
-# Create campaign
+# Crear campaña
 POST /api/campaigns
 
-# Update campaign
+# Actualizar campaña
 PUT /api/campaigns/{id}
 ```
 
-### Message Operations
+### Operaciones de Mensajes
 ```bash
-# Send single message
+# Enviar un mensaje único
 POST /api/messages
 {
     "phone_number": "+1234567890",
-    "message": "Hello World!"
+    "message": "¡Hola Mundo!"
 }
 
-# Get message status
+# Obtener estado de un mensaje
 GET /api/messages/{id}/status
 ```
 
-### Webhook Endpoints
+### Endpoints de Webhook
 ```bash
-# WhatsApp webhook (auto-configured)
+# Webhook de WhatsApp (configurado automáticamente)
 POST /webhook/whatsapp
 
-# Webhook verification
+# Verificación de webhook
 GET /webhook/whatsapp
 ```
 
-## 🔄 Webhook Integration
+## 🔄 Integración por Webhooks
 
-The system automatically handles WhatsApp webhooks for:
-- **Message Sent**: Confirms message delivery to WhatsApp
-- **Message Delivered**: Updates delivery status
-- **Message Read**: Tracks read receipts
-- **Incoming Messages**: Captures and links customer replies
+El sistema maneja automáticamente los webhooks de WhatsApp para:
+- **Mensaje Enviado**: Confirma el envío a WhatsApp
+- **Mensaje Entregado**: Actualiza el estado de entrega
+- **Mensaje Leído**: Registra los recibos de lectura
+- **Mensajes Entrantes**: Captura y vincula respuestas de clientes
 
-## 📊 Campaign Statistics
+## 📊 Estadísticas de Campaña
 
-### Available Metrics
-- **Total Recipients**: Number of target recipients
-- **Sent Count**: Successfully sent messages
-- **Delivered Count**: Messages delivered to devices
-- **Read Count**: Messages opened by recipients
-- **Reply Count**: Customer responses received
-- **Failed Count**: Failed message attempts
+### Métricas Disponibles
+- **Total de Destinatarios**: Número de destinatarios objetivo
+- **Enviados**: Mensajes enviados con éxito
+- **Entregados**: Mensajes entregados a los dispositivos
+- **Leídos**: Mensajes abiertos por los destinatarios
+- **Respuestas**: Respuestas recibidas de clientes
+- **Fallidos**: Intentos de envío fallidos
 
-### Calculated Rates
-- **Success Rate**: (Delivered / Sent) × 100
-- **Read Rate**: (Read / Delivered) × 100
-- **Reply Rate**: (Replies / Delivered) × 100
+### Tasas Calculadas
+- **Tasa de Éxito**: (Entregados / Enviados) × 100
+- **Tasa de Lectura**: (Leídos / Entregados) × 100
+- **Tasa de Respuesta**: (Respuestas / Entregados) × 100
 
-## 🛡 Security Features
+## 🛡 Características de Seguridad
 
-- **CSRF Protection**: Webhook endpoints properly secured
-- **Input Validation**: All user inputs validated
-- **Rate Limiting**: API endpoints rate limited
-- **Authentication**: User authentication required
-- **Data Sanitization**: Phone numbers and content sanitized
+- **Protección CSRF**: Endpoints de webhook asegurados correctamente
+- **Validación de Entradas**: Todas las entradas de usuario validadas
+- **Limitación de Tasa**: Endpoints de la API con rate limiting
+- **Autenticación**: Acceso autenticado requerido
+- **Saneamiento de Datos**: Números de teléfono y contenido sanitizados
 
-## 🧪 Testing
+## 🧪 Pruebas
 
-### Run Laravel Tests
+### Ejecutar Tests de Laravel
 ```bash
 php artisan test
 ```
 
-### Manual Testing
-1. Create a test campaign
-2. Send messages via WhatsApp Engine
-3. Reply from your phone
-4. Verify statistics update in real-time
+### Pruebas Manuales
+1. Crea una campaña de prueba
+2. Envía mensajes mediante el Motor de WhatsApp
+3. Responde desde tu teléfono
+4. Verifica que las estadísticas se actualizan en tiempo real
 
-## 🔧 Development
+## 🔧 Desarrollo
 
-### Code Style
+### Estilo de Código
 ```bash
 ./vendor/bin/pint
 ```
 
-### Frontend Development
+### Desarrollo Frontend
 ```bash
 npm run dev
 ```
 
-### Database Seeding
+### Seed de Base de Datos
 ```bash
 php artisan db:seed
 ```
 
-## 📁 Project Structure
+## 📁 Estructura del Proyecto
 
 ```
 ├── app/
-│   ├── Http/Controllers/     # API & Webhook controllers
-│   ├── Livewire/            # Frontend components
-│   ├── Models/              # Database models
-│   └── Services/            # Business logic
-├── whatsapp-engine/         # Node.js WhatsApp integration
-├── resources/views/         # Blade templates
-├── database/migrations/     # Database schema
-└── routes/                  # Application routes
+│   ├── Http/Controllers/     # Controladores de API y Webhook
+│   ├── Livewire/            # Componentes frontend
+│   ├── Models/              # Modelos de la base de datos
+│   └── Services/            # Lógica de negocio
+├── whatsapp-engine/         # Integración de WhatsApp en Node.js
+├── resources/views/         # Plantillas Blade
+├── database/migrations/     # Esquema de la base de datos
+└── routes/                  # Rutas de la aplicación
 ```
 
-## 🤝 Contributing
+## 🤝 Contribuir
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+1. Haz fork del repositorio
+2. Crea una rama de función (`git checkout -b feature/amazing-feature`)
+3. Haz commit de tus cambios (`git commit -m 'Add amazing feature'`)
+4. Sube la rama (`git push origin feature/amazing-feature`)
+5. Abre un Pull Request
 
-## 📄 License
+## 📄 Licencia
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Este proyecto está bajo la licencia MIT - consulta el archivo [LICENSE](LICENSE) para más detalles.
 
-## 🆘 Support
+## 🆘 Soporte
 
-- **Issues**: Report bugs via GitHub Issues
-- **Documentation**: Check the wiki for detailed guides
-- **Community**: Join our Discord server for support
+- **Issues**: Reporta bugs mediante GitHub Issues
+- **Documentación**: Revisa la wiki para guías detalladas
+- **Comunidad**: Únete a nuestro servidor de Discord para soporte
 
-## 🙏 Acknowledgments
+## 🙏 Agradecimientos
 
-- Built with [Laravel](https://laravel.com/)
-- WhatsApp integration via [Baileys](https://github.com/WhiskeySockets/Baileys)
-- UI components with [TailwindCSS](https://tailwindcss.com/)
-- Real-time features with [Livewire](https://laravel-livewire.com/)
+- Construido con [Laravel](https://laravel.com/)
+- Integración de WhatsApp mediante [Baileys](https://github.com/WhiskeySockets/Baileys)
+- Componentes UI con [TailwindCSS](https://tailwindcss.com/)
+- Funcionalidades en tiempo real con [Livewire](https://laravel-livewire.com/)
